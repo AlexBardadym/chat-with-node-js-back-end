@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="./main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="./index.js" defer></script>
+    <title>Brain-Acad-Chat</title>
+</head>
+
+<body>
+    <div id="login-section" class="valign-wrapper row login-box">
+        <div class="col card hoverable s10 pull-s1 m6 pull-m3 l4 pull-l4 #e8eaf6 indigo lighten-5">
+            <form onsubmit="return false;">
+                <div class="card-content">
+                    <span class="card-title">Enter username, e-mail and password</span>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <label for="user">Username</label>
+                            <input type="text" class="validate" name="username" id="user" />
+                        </div>
+                        <div class="input-field col s12">
+                            <label for="email">Email address</label>
+                            <input type="email" class="validate" name="email" id="email" />
+                        </div>
+                        <div class="input-field col s12">
+                            <label for="password">Password </label>
+                            <input type="password" class="validate" name="password" id="password" />
+                        </div>
+                    </div>
+                </div>
+                <div class="card-action right-align">
+                    <input type="reset" id="reset" class="btn #5c6bc0 indigo lighten-4 waves-effect waves-light"
+                        value="Clear">
+                    <input id="submit" type="submit"
+                        class="btn tooltipped #5c6bc0 indigo lighten-1 waves-effect waves-light" value="Login">
+                </div>
+            </form>
+        </div>
+    </div>
+    <div id="chat-section" class="valign-wrapper row">
+        <div class="col card hoverable s10  pull-s1 m6 pull-m3 l6 pull-l3 #e8eaf6 indigo lighten-5">
+            <div class="col s12">
+                <div class="row" style="text-align:center">
+                    <h5>Messages</h5>
+                    <div class="input-field col s12" id="render" style="text-align:center">
+
+                    </div>
+                </div>
+            </div>
+            <form class="col s12" onsubmit="return false;">
+                <div class="row">
+                    <div class="input-field col s10 offset-s1">
+                        <textarea id="message" class="materialize-textarea"></textarea>
+                        <label for="message">write your message here</label>
+                    </div>
+                </div>
+                <div class="row card-action center-align">
+                    <a id="send" class="btn #5c6bc0 indigo lighten-1 waves-effect waves-light">Send</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
